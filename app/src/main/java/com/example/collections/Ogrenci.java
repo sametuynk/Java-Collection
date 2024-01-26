@@ -1,23 +1,25 @@
 package com.example.collections;
 
+import androidx.annotation.Nullable;
+
 public class Ogrenci implements Comparable<Ogrenci> {
-    private int tcno;
+    private int okulNo;
     private String isim;
 
     public Ogrenci() {
     }
 
     public Ogrenci(int tcno, String isim) {
-        this.tcno = tcno;
+        this.okulNo = tcno;
         this.isim = isim;
     }
 
-    public int getTcno() {
-        return tcno;
+    public int getOkulNo() {
+        return okulNo;
     }
 
-    public void setTcno(int tcno) {
-        this.tcno = tcno;
+    public void setOkulNo(int okulNo) {
+        this.okulNo = okulNo;
     }
 
     public String getIsim() {
@@ -31,5 +33,15 @@ public class Ogrenci implements Comparable<Ogrenci> {
     @Override
     public int compareTo(Ogrenci ogrenci) {
         return new String(this.isim).compareTo(ogrenci.getIsim());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.okulNo;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        return this.okulNo == ((Ogrenci) obj).getOkulNo();
     }
 }

@@ -1,14 +1,12 @@
 package com.example.collections;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.HashSet;
 
-public class ArrayListNesneMain {
+public class HashSetNesneMain {
     public static void main(String[] args) {
 
+        HashSet<Ogrenci> nesneler =new HashSet<>();
 
-        List<Ogrenci>nesneler = new ArrayList<>();
 
         Ogrenci o1 = new Ogrenci(164,"samet");
         Ogrenci o2 = new Ogrenci(365,"berat");
@@ -20,14 +18,13 @@ public class ArrayListNesneMain {
         nesneler.add(o3);
         nesneler.add(o4);
 
-        Collections.sort(nesneler);
+        Ogrenci o5=new Ogrenci(67,"Alperen");
+        nesneler.add(o5);
 
         for (Ogrenci o:nesneler) {
             System.out.println("*********");
             System.out.println("Öğrenci TCNO : "+o.getOkulNo());
             System.out.println("Öğrenci ADI  : "+o.getIsim());
-
         }
-
     }
 }
