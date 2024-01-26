@@ -3,7 +3,7 @@ package com.example.collections;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class OkulKayitExample {
+public class OkulKayitExample1 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
